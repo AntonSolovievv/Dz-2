@@ -1,14 +1,15 @@
 #include <iostream>
 using namespace std;
-int fib(int n)
-{
-	if (n <= 1)
-		return n-1;
-	return abs((fib(n - 1) + fib(n - 2)));
-}
 int main()
 {
-	int n;
+	int n, a = 0, b = 1;
 	cin >> n;
-	cout << fib(n);
+	cout << a << endl << b << endl;
+	for (int i = 1; i < n-1; i++)
+	{
+		cout << a + b << endl;
+		int z = b;
+		b = a + z;
+		a = z;
+	}
 }
